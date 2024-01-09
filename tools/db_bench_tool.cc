@@ -1360,6 +1360,10 @@ static bool ValidateTableCacheNumshardbits(const char* flagname,
 }
 DEFINE_int32(table_cache_numshardbits, 4, "");
 
+DEFINE_string(spdk, "", "Name of SPDK configuration file");
+DEFINE_string(spdk_bdev, "", "Name of SPDK blockdev to load");
+DEFINE_uint64(spdk_cache_size, 4096, "Size of SPDK filesystem cache (in MB)");
+
 DEFINE_string(env_uri, "",
               "URI for registry Env lookup. Mutually exclusive with --fs_uri");
 DEFINE_string(fs_uri, "",
